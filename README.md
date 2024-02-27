@@ -1,5 +1,7 @@
 # README
 
+Première expérience avec Ruby on Rails
+
 ### Ruby version
 Ruby 3.2.3  
 Rails 7.1.3.2  
@@ -73,13 +75,20 @@ end
   
 ### Test communication avec l'api de modération Logora  
 `rails console`  
-`irb(main):001>` `moderated_model = ModeratedModel.new(content: "Texte à modérer")`  instance de moderated_model  
-`irb(main):001>` `moderated_model.save`  enregistrement dans la db du nouveau content  
-`irb(main):001>` `moderated_model.check_api_status`  test status API  
-`irb(main):001>` `moderated_model.moderate_content`  affichage du résultat de l'api  
-`irb(main):001>` `ModeratedModel.all`  affichage de tout les models générés
-`irb(main):001>` `ModeratedModel.pluck(:is_accepted, :content)`  affichage des col is_accepted et content seulement
-`irb(main):001>` `ModeratedModel.destroy_all`  supprimer tout les models générés  
+instance de moderated_model  
+`irb(main):001>` `moderated_model = ModeratedModel.new(content: "Texte à modérer")`   
+enregistrement dans la db du nouveau content  
+`irb(main):001>` `moderated_model.save`   
+test status API  
+`irb(main):001>` `moderated_model.check_api_status`  
+affichage du résultat de l'api  
+`irb(main):001>` `moderated_model.moderate_content`  
+affichage de tout les models générés  
+`irb(main):001>` `ModeratedModel.all`  
+affichage des col is_accepted et content seulement  
+`irb(main):001>` `ModeratedModel.pluck(:is_accepted, :content)`  
+supprimer tout les models générés  
+`irb(main):001>` `ModeratedModel.destroy_all`  
   
 ### Informations  
 `rails server` accessible sur http://127.0.0.1:3000/  
