@@ -7,17 +7,22 @@ Ruby 3.2.3
 Rails 7.1.3.2  
   
 ### System dependencies  
-`gem install rails` si rails n'est pas installé  
+si rails n'est pas installé  
+`gem install rails`  
   
 ### Creation projet
 `rails new logora_test`  
   
 ### Création DB
-`rails generate model ModeratedModel`  génération du modèle  
-`rails generate migration AddIsAcceptedToModeratedModel is_accepted:boolean:default:false`  ajout de la colonne is_accepted de type booléen avec une convention de nommage pour la migration  
+génération du modèle  
+`rails generate model ModeratedModel`  
+ajout de la colonne is_accepted de type booléen avec une convention de nommage pour la migration  
+`rails generate migration AddIsAcceptedToModeratedModel is_accepted:boolean:default:false`  
+crée un nouveau model  
 `rails generate migration AddContentToModeratedModel content:text`  
-`rails db:migrate` crée un nouveau model  
-`rails db:schema:dump`  affiche le dump dans le fichier db/schema  
+`rails db:migrate`  
+affiche le dump dans le fichier db/schema  
+`rails db:schema:dump`  
 ## Module moderable.rb
 ```rb
 # app/models/concerns/moderable.rb
